@@ -1,0 +1,58 @@
+:root {
+  --primary: rgba(41, 41, 41, 1);
+  --black-darker: rgba(25, 25, 25, 1);
+  --white: rgba(255, 255, 255, 1);
+  --dirty-white: rgba(242, 242, 242, 1);
+  --border-color: rgba(230, 230, 230, 1);
+  --secondary: rgba(117, 117, 117, 1);
+  --green: rgba(26, 137, 23, 1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+// html {
+//   font-size: 16px;
+// }
+
+// body {
+//   font-size: 62.5%;
+// }
+
+html,
+body {
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 2.37rem;
+}
+
+h1 {
+  margin-top: 2.05rem;
+  font-size: 24px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+}
