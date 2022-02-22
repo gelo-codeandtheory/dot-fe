@@ -70,11 +70,8 @@ const Home: NextPage = (props: any) => {
                 </svg>
                 <input type="search" placeholder="Search" />
               </div>
-              <img
-                src="https://miro.medium.com/fit/c/96/96/1*VZfJFJj5oVmZ5WzlrgSmRg.jpeg"
-                alt="author"
-              />
-              <h2>Eric Elliott</h2>
+              <img src={data?.author?.image} alt="author" />
+              <h2>{data?.author?.name}</h2>
               <p>108K Followers</p>
               <p>Make some magic. #Javascript</p>
               <div className={styles["subscription-buttons"]}>
