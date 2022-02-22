@@ -1,0 +1,47 @@
+.sticky-bottom {
+  border-top: 1px solid var(--border-color);
+  /* height: 50px; */
+  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+  background: var(--white);
+}
+
+.bottom-container {
+  padding: 0 40px;
+  margin: auto;
+  max-width: 692px;
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.vote-container {
+  display: flex;
+  align-items: center;
+  button {
+    display: flex;
+    align-items: center;
+    background: none;
+    margin-left: 24px;
+    &:first-child {
+      margin-left: 0;
+    }
+    svg {
+      margin-right: 5px;
+    }
+  }
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  svg {
+    padding-right: 1px;
+  }
+}
+
+.bookmark-icon {
+  margin: 0 6px 0px 7px;
+}

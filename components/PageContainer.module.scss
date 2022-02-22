@@ -1,0 +1,21 @@
+.content-container {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+
+  figure {
+    margin-top: 56px;
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+.container {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 79px 1fr;
+}

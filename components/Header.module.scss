@@ -1,0 +1,38 @@
+.nav-container {
+  height: 100%;
+
+  hr {
+    height: 1px;
+    background: var(--border-color);
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-right: 1px solid var(--border-color);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.nav-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-item {
+  padding-bottom: 35px;
+  cursor: pointer;
+}
+
+.brand {
+  width: 40px;
+  padding: 40px 0;
+  cursor: pointer;
+}
