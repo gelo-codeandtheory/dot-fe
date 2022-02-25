@@ -116,8 +116,7 @@ const Home: NextPage = (props: any) => {
 
 export async function getServerSideProps(context: any) {
   const { id } = context.params;
-  console.log("context", context);
-  const res = await fetch(`http://localhost:3000/api/articles/${id}`);
+  const res = await fetch(`${process.env.API_BASE_URL}articles/${id}`);
   const errorCode = res.ok ? false : res.status;
 
   if (errorCode) {
@@ -125,7 +124,6 @@ export async function getServerSideProps(context: any) {
   }
 
   const { article } = await res.json();
-  console.log("article", article);
   return { props: { data: article } };
 }
 
