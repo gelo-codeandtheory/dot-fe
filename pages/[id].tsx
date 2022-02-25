@@ -5,10 +5,19 @@ import ArticleFooter from "../components/ArticleFooter";
 import Aside from "../components/Aside";
 import { SearchIcon, SubscriptionIcon } from "../components/icons";
 import PageContainer from "../components/PageContainer";
+import Article from "../models/Article";
 import styles from "../styles/Article.module.scss";
 
 const Home: NextPage = (props: any) => {
-  const { data } = props;
+  const {
+    publisher,
+    author,
+    datePublish,
+    timeRead,
+    title,
+    subheader,
+    content,
+  }: Article = props;
 
   if (props.errorCode) {
     return <Error statusCode={props.errorCode} />;
@@ -26,33 +35,39 @@ const Home: NextPage = (props: any) => {
               layout="intrinsic"
             />
             <p>
-              Published in <a href="#">{data?.publisher}</a> ·
+              Published in <a href="#">{publisher}</a> ·
               <a href="http://"> Follow</a>
             </p>
           </div>
         </div>
         <div className={styles["content"]}>
           <div className={styles["author"]}>
-            <Image
-              src={data?.author?.image}
-              alt="author"
-              width={48}
-              height={48}
-              layout="intrinsic"
-            />
+            {author?.name && (
+              <Image
+                src={author.image}
+                alt="author"
+                width={48}
+                height={48}
+                layout="intrinsic"
+              />
+            )}
             <div className={styles["author-details"]}>
-              <p>{data?.author?.name}</p>
-              <p>
-                {data?.datePublish} · {data?.timeRead}
-              </p>
+              {author?.name && <p>{author.name}</p>}
+              {datePublish && timeRead && (
+                <p>
+                  {datePublish} · {timeRead}
+                </p>
+              )}
             </div>
           </div>
-          <h1 className={styles["title"]}>{data?.title}</h1>
-          <h2 className={styles["subheader"]}>{data?.subheader}</h2>
-          <section
-            className={styles["article"]}
-            dangerouslySetInnerHTML={{ __html: data?.content }}
-          />
+          {title && <h1 className={styles["title"]}>{title}</h1>}
+          {subheader && <h2 className={styles["subheader"]}>{subheader}</h2>}
+          {content && (
+            <section
+              className={styles["article"]}
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          )}
         </div>
         <ArticleFooter />
       </div>
@@ -72,14 +87,16 @@ const Home: NextPage = (props: any) => {
                 <SearchIcon />
                 <input type="search" placeholder="Search" />
               </div>
-              <Image
-                src={data?.author?.image}
-                alt="author"
-                width={100}
-                height={100}
-                layout="intrinsic"
-              />
-              <h2>{data?.author?.name}</h2>
+              {author?.image && (
+                <Image
+                  src={author.image}
+                  alt="author"
+                  width={100}
+                  height={100}
+                  layout="intrinsic"
+                />
+              )}
+              {author?.name && <h2>{author.name}</h2>}
               <p>108K Followers</p>
               <p>Make some magic. #Javascript</p>
               <div className={styles["subscription-buttons"]}>
@@ -154,7 +171,8 @@ export async function getServerSideProps(context: any) {
   }
 
   const { article } = await res.json();
-  return { props: { data: article } };
+  console.log("article", article);
+  return { props: { ...article } };
 }
 
 export default Home;
