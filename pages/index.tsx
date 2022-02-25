@@ -5,6 +5,7 @@ import { SearchIcon, SubscriptionIcon } from "../components/icons";
 import PageContainer from "../components/PageContainer";
 import styles from "../styles/Article.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home: NextPage = (props: any) => {
   return (
@@ -19,8 +20,14 @@ const Home: NextPage = (props: any) => {
               layout="intrinsic"
             />
             <p>
-              Published in <a href="#">Javascript Scene</a> ·
-              <a href="http://"> Follow</a>
+              Published in{" "}
+              <Link href="/">
+                <a>Javascript Scene</a>
+              </Link>{" "}
+              ·
+              <Link href="/">
+                <a> Follow</a>
+              </Link>
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import type { NextPage, NextPageContext } from "next";
 import Error from "next/error";
 import Image from "next/image";
+import Link from "next/link";
 import ArticleFooter from "../components/ArticleFooter";
 import Aside from "../components/Aside";
 import { SearchIcon, SubscriptionIcon } from "../components/icons";
@@ -36,8 +37,14 @@ const Home: NextPage = (props: any) => {
               layout="intrinsic"
             />
             <p>
-              Published in <a href="#">{publisher}</a> ·
-              <a href="http://"> Follow</a>
+              Published in{" "}
+              <Link href="/">
+                <a>{publisher}</a>
+              </Link>{" "}
+              ·
+              <Link href="/">
+                <a> Follow</a>
+              </Link>
             </p>
           </div>
         </div>
