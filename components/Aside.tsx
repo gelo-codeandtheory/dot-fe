@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Aside.module.scss";
 
 const Aside = (props: any) => {
@@ -6,18 +7,35 @@ const Aside = (props: any) => {
   return (
     <aside className={styles["secondary-nav-container"]}>
       <div className={styles["secondary-nav"]}>
-        {/* {renderArticleAside} */}
         {children}
         <div className={styles["site-maps"]}>
-          <a href="#">Help</a>
-          <a href="#">Status</a>
-          <a href="#">Writers</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">About</a>
-          <a href="#">Knowable</a>
+          <Link href="/">
+            <a>Help</a>
+          </Link>
+          <Link href="/">
+            <a>Status</a>
+          </Link>
+          <Link href="/">
+            <a>Writers</a>
+          </Link>
+          <Link href="/">
+            <a>Blog</a>
+          </Link>
+          <Link href="/">
+            <a>Careers</a>
+          </Link>
+          <Link href="/">
+            <a>Privacy</a>
+          </Link>
+          <Link href="/">
+            <a>Terms</a>
+          </Link>
+          <Link href="/">
+            <a>About</a>
+          </Link>
+          <Link href="/">
+            <a>Knowable</a>
+          </Link>
         </div>
       </div>
     </aside>

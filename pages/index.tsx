@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
 import ArticleFooter from "../components/ArticleFooter";
 import Aside from "../components/Aside";
+import { SearchIcon, SubscriptionIcon } from "../components/icons";
 import PageContainer from "../components/PageContainer";
 import styles from "../styles/Article.module.scss";
+import Image from "next/image";
+import Link from "next/link";
 
 const Home: NextPage = (props: any) => {
   return (
@@ -10,18 +13,32 @@ const Home: NextPage = (props: any) => {
       <div>
         <div className={styles["content-header-container"]}>
           <div className={styles["content-header"]}>
-            <img src="https://miro.medium.com/fit/c/64/64/1*fegbK6HDD8crwrwARuMhaQ.png" />
+            <Image
+              src="/publisher1.png"
+              width={32}
+              height={32}
+              layout="intrinsic"
+            />
             <p>
-              Published in <a href="#">Javascript Scene</a> ·
-              <a href="http://"> Follow</a>
+              Published in{" "}
+              <Link href="/">
+                <a>Javascript Scene</a>
+              </Link>{" "}
+              ·
+              <Link href="/">
+                <a> Follow</a>
+              </Link>
             </p>
           </div>
         </div>
         <div className={styles["content"]}>
           <div className={styles["author"]}>
-            <img
-              src="https://miro.medium.com/fit/c/96/96/1*VZfJFJj5oVmZ5WzlrgSmRg.jpeg"
+            <Image
+              src="/author1.jpeg"
               alt="author"
+              width={48}
+              height={48}
+              layout="intrinsic"
             />
             <div className={styles["author-details"]}>
               <p>Eric Elliott</p>
@@ -152,19 +169,15 @@ const Home: NextPage = (props: any) => {
           <div className={styles["related-container"]}>
             <div className={styles["related-author-container"]}>
               <div className={styles["search-container"]}>
-                <svg
-                  width="25"
-                  height="25"
-                  viewBox="0 0 25 25"
-                  fill="rgba(8, 8, 8, 1)"
-                >
-                  <path d="M20.07 18.93l-4.16-4.15a6 6 0 1 0-.88.88l4.15 4.16a.62.62 0 1 0 .89-.89zM6.5 11a4.75 4.75 0 1 1 9.5 0 4.75 4.75 0 0 1-9.5 0z"></path>
-                </svg>
+                <SearchIcon />
                 <input type="search" placeholder="Search" />
               </div>
-              <img
-                src="https://miro.medium.com/fit/c/96/96/1*VZfJFJj5oVmZ5WzlrgSmRg.jpeg"
+              <Image
+                src="/author1.jpeg"
                 alt="author"
+                width={100}
+                height={100}
+                layout="intrinsic"
               />
               <h2>Eric Elliott</h2>
               <p>108K Followers</p>
@@ -174,36 +187,7 @@ const Home: NextPage = (props: any) => {
                   Follow
                 </button>
                 <button type="button" className={styles["subscription-button"]}>
-                  <svg
-                    width="38"
-                    height="38"
-                    viewBox="0 0 38 38"
-                    fill="none"
-                    className="oe nz oa"
-                  >
-                    <rect
-                      x="26.25"
-                      y="9.25"
-                      width="0.5"
-                      height="6.5"
-                      rx="0.25"
-                      strokeWidth="0.5"
-                    ></rect>
-                    <rect
-                      x="29.75"
-                      y="12.25"
-                      width="0.5"
-                      height="6.5"
-                      rx="0.25"
-                      transform="rotate(90 29.75 12.25)"
-                      strokeWidth="0.5"
-                    ></rect>
-                    <path
-                      d="M19.5 12.5h-7a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-5"
-                      strokeLinecap="round"
-                    ></path>
-                    <path d="M11.5 14.5L19 20l4-3" strokeLinecap="round"></path>
-                  </svg>
+                  <SubscriptionIcon />
                 </button>
               </div>
             </div>
@@ -211,30 +195,43 @@ const Home: NextPage = (props: any) => {
               <h2>Related</h2>
               <div className={styles["related-items"]}>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
+                    className={styles["related-image"]}
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
