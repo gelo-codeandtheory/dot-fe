@@ -4,6 +4,7 @@ import Aside from "../components/Aside";
 import { SearchIcon, SubscriptionIcon } from "../components/icons";
 import PageContainer from "../components/PageContainer";
 import styles from "../styles/Article.module.scss";
+import Image from "next/image";
 
 const Home: NextPage = (props: any) => {
   return (
@@ -11,7 +12,12 @@ const Home: NextPage = (props: any) => {
       <div>
         <div className={styles["content-header-container"]}>
           <div className={styles["content-header"]}>
-            <img src="https://miro.medium.com/fit/c/64/64/1*fegbK6HDD8crwrwARuMhaQ.png" />
+            <Image
+              src="/publisher1.png"
+              width={32}
+              height={32}
+              layout="intrinsic"
+            />
             <p>
               Published in <a href="#">Javascript Scene</a> ·
               <a href="http://"> Follow</a>
@@ -20,9 +26,12 @@ const Home: NextPage = (props: any) => {
         </div>
         <div className={styles["content"]}>
           <div className={styles["author"]}>
-            <img
-              src="https://miro.medium.com/fit/c/96/96/1*VZfJFJj5oVmZ5WzlrgSmRg.jpeg"
+            <Image
+              src="/author1.jpeg"
               alt="author"
+              width={48}
+              height={48}
+              layout="intrinsic"
             />
             <div className={styles["author-details"]}>
               <p>Eric Elliott</p>
@@ -156,9 +165,12 @@ const Home: NextPage = (props: any) => {
                 <SearchIcon />
                 <input type="search" placeholder="Search" />
               </div>
-              <img
-                src="https://miro.medium.com/fit/c/96/96/1*VZfJFJj5oVmZ5WzlrgSmRg.jpeg"
+              <Image
+                src="/author1.jpeg"
                 alt="author"
+                width={100}
+                height={100}
+                layout="intrinsic"
               />
               <h2>Eric Elliott</h2>
               <p>108K Followers</p>
@@ -176,30 +188,43 @@ const Home: NextPage = (props: any) => {
               <h2>Related</h2>
               <div className={styles["related-items"]}>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
+                    className={styles["related-image"]}
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>

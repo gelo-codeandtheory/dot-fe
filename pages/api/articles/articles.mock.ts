@@ -10,7 +10,7 @@ const articles: Array<Article> = [
     author: {
       name: "Eric Elliott",
       image:
-        "https://miro.medium.com/fit/c/96/96/1*VZfJFJj5oVmZ5WzlrgSmRg.jpeg",
+        "/author1.jpeg",
     },
     datePublish: "Oct 3, 2015",
     timeRead: "13 min read",

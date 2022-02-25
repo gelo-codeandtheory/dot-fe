@@ -1,5 +1,6 @@
 import type { NextPage, NextPageContext } from "next";
 import Error from "next/error";
+import Image from "next/image";
 import ArticleFooter from "../components/ArticleFooter";
 import Aside from "../components/Aside";
 import { SearchIcon, SubscriptionIcon } from "../components/icons";
@@ -8,7 +9,6 @@ import styles from "../styles/Article.module.scss";
 
 const Home: NextPage = (props: any) => {
   const { data } = props;
-  console.log("props", props);
 
   if (props.errorCode) {
     return <Error statusCode={props.errorCode} />;
@@ -19,7 +19,12 @@ const Home: NextPage = (props: any) => {
       <div>
         <div className={styles["content-header-container"]}>
           <div className={styles["content-header"]}>
-            <img src="https://miro.medium.com/fit/c/64/64/1*fegbK6HDD8crwrwARuMhaQ.png" />
+            <Image
+              src="/publisher1.png"
+              width={32}
+              height={32}
+              layout="intrinsic"
+            />
             <p>
               Published in <a href="#">{data?.publisher}</a> ·
               <a href="http://"> Follow</a>
@@ -28,7 +33,13 @@ const Home: NextPage = (props: any) => {
         </div>
         <div className={styles["content"]}>
           <div className={styles["author"]}>
-            <img src={data?.author?.image} alt="author" />
+            <Image
+              src={data?.author?.image}
+              alt="author"
+              width={48}
+              height={48}
+              layout="intrinsic"
+            />
             <div className={styles["author-details"]}>
               <p>{data?.author?.name}</p>
               <p>
@@ -61,7 +72,13 @@ const Home: NextPage = (props: any) => {
                 <SearchIcon />
                 <input type="search" placeholder="Search" />
               </div>
-              <img src={data?.author?.image} alt="author" />
+              <Image
+                src={data?.author?.image}
+                alt="author"
+                width={100}
+                height={100}
+                layout="intrinsic"
+              />
               <h2>{data?.author?.name}</h2>
               <p>108K Followers</p>
               <p>Make some magic. #Javascript</p>
@@ -78,30 +95,43 @@ const Home: NextPage = (props: any) => {
               <h2>Related</h2>
               <div className={styles["related-items"]}>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
+                    className={styles["related-image"]}
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
                 <div className={styles["related-item"]}>
-                  <img
-                    src="https://miro.medium.com/focal/58/58/50/50/0*SYbbtHZcvbFB0fHR.jpg"
+                  <Image
+                    src="/recommendation.jpeg"
                     alt="related article"
+                    width={50}
+                    height={50}
+                    layout="intrinsic"
                   />
                   <p>Currying for Javascript Developers with Examples</p>
                 </div>
