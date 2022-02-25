@@ -1,4 +1,5 @@
 import Author from "./Author";
+import Recommendation from "./Recommendation";
 
 export default interface Article {
   id: string;
@@ -12,4 +13,5 @@ export default interface Article {
   description?: string;
   tags?: string[];
   link?: string;
+  recommendations?: Recommendation[];
 }

@@ -17,6 +17,7 @@ const Home: NextPage = (props: any) => {
     title,
     subheader,
     content,
+    recommendations,
   }: Article = props;
 
   if (props.errorCode) {
@@ -110,49 +111,24 @@ const Home: NextPage = (props: any) => {
             </div>
             <div className={styles["related-articles"]}>
               <h2>Related</h2>
-              <div className={styles["related-items"]}>
-                <div className={styles["related-item"]}>
-                  <Image
-                    src="/recommendation.jpeg"
-                    alt="related article"
-                    width={50}
-                    height={50}
-                    layout="intrinsic"
-                  />
-                  <p>Currying for Javascript Developers with Examples</p>
-                </div>
-                <div className={styles["related-item"]}>
-                  <Image
-                    src="/recommendation.jpeg"
-                    alt="related article"
-                    width={50}
-                    height={50}
-                    layout="intrinsic"
-                    className={styles["related-image"]}
-                  />
-                  <p>Currying for Javascript Developers with Examples</p>
-                </div>
-                <div className={styles["related-item"]}>
-                  <Image
-                    src="/recommendation.jpeg"
-                    alt="related article"
-                    width={50}
-                    height={50}
-                    layout="intrinsic"
-                  />
-                  <p>Currying for Javascript Developers with Examples</p>
-                </div>
-                <div className={styles["related-item"]}>
-                  <Image
-                    src="/recommendation.jpeg"
-                    alt="related article"
-                    width={50}
-                    height={50}
-                    layout="intrinsic"
-                  />
-                  <p>Currying for Javascript Developers with Examples</p>
-                </div>
-              </div>
+              {recommendations &&
+                recommendations?.length &&
+                recommendations.map((r) => (
+                  <div className={styles["related-items"]}>
+                    <div className={styles["related-item"]}>
+                      {r?.image && (
+                        <Image
+                          src={r.image}
+                          alt="related article"
+                          width={50}
+                          height={50}
+                          layout="intrinsic"
+                        />
+                      )}
+                      {r?.title && <p>{r.title}</p>}
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
         </div>

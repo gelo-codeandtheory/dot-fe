@@ -9,8 +9,7 @@ const articles: Array<Article> = [
         Every Javascript Developer Should Know`,
     author: {
       name: "Eric Elliott",
-      image:
-        "/author1.jpeg",
+      image: "/author1.jpeg",
     },
     datePublish: "Oct 3, 2015",
     timeRead: "13 min read",
@@ -116,6 +115,24 @@ const articles: Array<Article> = [
               </ol>`,
     tags: ["Programming", "Education"],
     description: "Description...",
+    recommendations: [
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+    ],
   },
   // Body Inventory
   {
@@ -231,6 +248,25 @@ const articles: Array<Article> = [
     tags: ["Programming", "Education"],
     description:
       "I was in college and deeply involved in theater. We were doing an exercise blindfolded, in a dark room, and we were instructed not to speak but to get to know each other by touch — a group grope. Afterwards one of the participants told me he’d noticed my ribcage was unusual for the way it went straight down rather than curving in at the waist. He said this without judgment; he was simply offering an observation. I hadn’t ever noticed this anomaly about myself, this certain way my body was different from other bodies. Bill Ochs is forever imprinted on my memory for having said that.",
+
+    recommendations: [
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+    ],
   },
   // Virtual Real Estate Will Be the Next Speculative Frenzy
   {
@@ -348,6 +384,24 @@ const articles: Array<Article> = [
     description:
       "The American dream of homeownership has become a hallucination — in the metaverse",
     link: "https://marker.medium.com/virtual-real-estate-will-be-the-next-speculative-frenzy-43083d9638f8",
+    recommendations: [
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+    ],
   },
   // What Makes a Password Strong: Why What You’ve Been Told Is Wrong
   {
@@ -464,6 +518,24 @@ const articles: Array<Article> = [
     tags: ["Cybersecurity"],
     description: "and it’s actually making your passwords weaker.",
     link: "https://medium.com/codex/what-makes-a-password-strong-why-what-youve-been-told-is-wrong-8e25539d2213",
+    recommendations: [
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+    ],
   },
   // DevOps Engineer is the new SysAdmin
   {
@@ -580,6 +652,24 @@ const articles: Array<Article> = [
     tags: ["Business"],
     description: "If you’re not doing dev… you’re just doing ops",
     link: "https://medium.com/nerd-for-tech/devops-engineer-is-the-new-sysadmin-5bc46b86d413",
+    recommendations: [
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+    ],
   },
   // No One Wants Your Metaverse
   {
@@ -695,6 +785,24 @@ const articles: Array<Article> = [
     tags: ["Programming", "Education"],
     description: "Let’s define the future we actually do want",
     link: "https://onezero.medium.com/no-one-wants-your-metaverse-8f4334f52206",
+    recommendations: [
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+      {
+        title: "Currying for Javascript Developers with Examples",
+        image: "/recommendation.jpeg",
+      },
+    ],
   },
 ];
 
